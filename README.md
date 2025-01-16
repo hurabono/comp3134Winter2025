@@ -15,7 +15,7 @@ The **Introduction to Cyber Security (COMP3134)** course explores foundational t
 - Threats and vulnerabilities
 - Network security fundamentals
 - Secure coding practices
-- Incident response and forensics
+
 
 The lab exercises aim to provide hands-on experience with tools and techniques used by cybersecurity professionals.
 
