@@ -1,0 +1,12 @@
+PS C:\Users\heesu> ping 146.190.254.227
+
+Pinging 146.190.254.227 with 32 bytes of data:
+Reply from 146.190.254.227: bytes=32 time=11ms TTL=57
+Reply from 146.190.254.227: bytes=32 time=18ms TTL=57
+Reply from 146.190.254.227: bytes=32 time=8ms TTL=57
+Reply from 146.190.254.227: bytes=32 time=7ms TTL=57
+
+Ping statistics for 146.190.254.227:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 7ms, Maximum = 18ms, Average = 11ms
