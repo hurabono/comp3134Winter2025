@@ -1,0 +1,73 @@
+root@ubuntu-steph:~# ssh -p 2222 user@146.190.254.227
+ssh: connect to host 146.190.254.227 port 2222: Connection refused
+root@ubuntu-steph:~# ssh user@146.190.254.227
+The authenticity of host '146.190.254.227 (146.190.254.227)' can't be established.
+ED25519 key fingerprint is SHA256:+xdyeqbJ4errPs6JPslJyyH4CzQlezAFlk8EgUxa36c.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?  yes
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added '146.190.254.227' (ED25519) to the list of known hosts.
+user@146.190.254.227's password: 
+Permission denied, please try again.
+user@146.190.254.227's password: 
+Permission denied, please try again.
+user@146.190.254.227's password: 
+user@146.190.254.227: Permission denied (publickey,password).
+root@ubuntu-steph:~# 11433
+11433: command not found
+root@ubuntu-steph:~# sudo ufw allow 2222/tcp
+Rules updated
+Rules updated (v6)
+root@ubuntu-steph:~# sudo service ssh restart
+root@ubuntu-steph:~# ssh -p 2222 user@146.190.254.227
+ssh: connect to host 146.190.254.227 port 2222: Connection refused
+root@ubuntu-steph:~# sudo nano /etc/ssh/sshd_config
+root@ubuntu-steph:~# sudo netstat -tulnp | grep 2222
+sudo: netstat: command not found
+root@ubuntu-steph:~# sudo ss -tulnp | grep 2222
+root@ubuntu-steph:~# sudo ss -tulnp | grep 2222
+root@ubuntu-steph:~# ufw status
+Status: inactive
+root@ubuntu-steph:~# sudo ufw enable
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
+Firewall is active and enabled on system startup
+root@ubuntu-steph:~# ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+80/tcp                     DENY        Anywhere                  
+80                         DENY        Anywhere                  
+2222/tcp                   ALLOW       Anywhere                  
+80/tcp (v6)                DENY        Anywhere (v6)             
+80 (v6)                    DENY        Anywhere (v6)             
+2222/tcp (v6)              ALLOW       Anywhere (v6)             
+
+root@ubuntu-steph:~# ssh -p 2222 user@146.190.254.227
+ssh: connect to host 146.190.254.227 port 2222: Connection refused
+root@ubuntu-steph:~# sudo systemctl restart ssh
+root@ubuntu-steph:~# sudo ss -tulnp | grep 2222
+root@ubuntu-steph:~# sudo ss -tulnp | grep 2222
+root@ubuntu-steph:~# ssh -p 2222 user@146.190.254.227
+ssh: connect to host 146.190.254.227 port 2222: Connection refused
+root@ubuntu-steph:~# sudo systemctl status ssh
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+     Active: active (running) since Tue 2025-03-04 02:42:05 UTC; 53s ago
+ Invocation: 21cb24d8ce6d4f09885e9161499b4204
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 1088428 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 1088430 (sshd)
+      Tasks: 1 (limit: 1110)
+     Memory: 1.2M (peak: 1.5M)
+        CPU: 41ms
+     CGroup: /system.slice/ssh.service
+             └─1088430 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+Mar 04 02:42:05 ubuntu-steph systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Mar 04 02:42:05 ubuntu-steph sshd[1088430]: Server listening on 0.0.0.0 port 22.
+Mar 04 02:42:05 ubuntu-steph sshd[1088430]: Server listening on :: port 22.
+Mar 04 02:42:05 ubuntu-steph systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+root@ubuntu-steph:~# 
