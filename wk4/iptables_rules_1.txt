@@ -1,0 +1,59 @@
+PS C:\Users\heesu> ssh -i ~/.ssh/your_private_key.pem root@146.190.254.227
+Warning: Identity file C:\Users\heesu/.ssh/your_private_key.pem not accessible: No such file or directory.
+root@146.190.254.227's password:
+Permission denied, please try again.
+root@146.190.254.227's password:
+Welcome to Ubuntu 24.10 (GNU/Linux 6.11.0-9-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Jan 29 19:20:21 UTC 2025
+
+  System load:  0.01               Processes:             115
+  Usage of /:   10.4% of 23.10GB   Users logged in:       1
+  Memory usage: 21%                IPv4 address for eth0: 146.190.254.227
+  Swap usage:   0%                 IPv4 address for eth0: 10.20.0.5
+
+60 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+*** System restart required ***
+Last login: Wed Jan 29 19:06:36 2025 from 162.243.190.66
+root@ubuntu-steph:~# man iptables
+root@ubuntu-steph:~# root@ubuntu-steph:~# apt-get update
+Hit:1 http://security.ubuntu.com/ubuntu oracular-security InRelease
+Hit:2 http://mirrors.digitalocean.com/ubuntu oracular InRelease
+Get:3 http://mirrors.digitalocean.com/ubuntu oracular-updates InRelease [126 kB]
+Hit:4 https://repos-droplet.digitalocean.com/apt/droplet-agent main InRelease
+Get:5 http://mirrors.digitalocean.com/ubuntu oracular-backports InRelease [126 kB]
+Get:6 http://mirrors.digitalocean.com/ubuntu oracular-updates/main amd64 Packages [253 kB]
+Get:7 http://mirrors.digitalocean.com/ubuntu oracular-updates/main amd64 Components [35.3 kB]
+Get:8 http://mirrors.digitalocean.com/ubuntu oracular-updates/universe amd64 Packages [158 kB]
+Get:9 http://mirrors.digitalocean.com/ubuntu oracular-updates/universe amd64 Components [53.2 kB]
+Get:10 http://mirrors.digitalocean.com/ubuntu oracular-updates/restricted amd64 Components [216 B]
+Get:11 http://mirrors.digitalocean.com/ubuntu oracular-updates/multiverse amd64 Components [212 B]
+Get:12 http://mirrors.digitalocean.com/ubuntu oracular-backports/main amd64 Components [212 B]
+Get:13 http://mirrors.digitalocean.com/ubuntu oracular-backports/universe amd64 Components [9696 B]
+Get:14 http://mirrors.digitalocean.com/ubuntu oracular-backports/restricted amd64 Components [216 B]
+Get:15 http://mirrors.digitalocean.com/ubuntu oracular-backports/multiverse amd64 Components [216 B]
+Fetched 763 kB in 1s (608 kB/s)
+Reading package lists... Done
+root@ubuntu-steph:~# apt-get install iptables
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+iptables is already the newest version (1.8.10-3ubuntu2).
+iptables set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 59 not upgraded.
+root@ubuntu-steph:~# iptables -L -v
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination
+
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination

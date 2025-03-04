@@ -1,0 +1,220 @@
+root@ubuntu-steph:~# sudo apt-get update
+Hit:1 http://mirrors.digitalocean.com/ubuntu oracular InRelease
+Get:2 http://mirrors.digitalocean.com/ubuntu oracular-updates InRelease [126 kB]                                
+Get:3 http://mirrors.digitalocean.com/ubuntu oracular-backports InRelease [126 kB]                              
+Get:4 http://security.ubuntu.com/ubuntu oracular-security InRelease [126 kB]                                    
+Hit:5 https://repos-droplet.digitalocean.com/apt/droplet-agent main InRelease                                   
+Get:6 http://mirrors.digitalocean.com/ubuntu oracular-updates/main amd64 Packages [312 kB]
+Get:7 http://mirrors.digitalocean.com/ubuntu oracular-updates/main amd64 Components [35.5 kB]
+Get:8 http://mirrors.digitalocean.com/ubuntu oracular-updates/universe amd64 Packages [189 kB]
+Get:9 http://mirrors.digitalocean.com/ubuntu oracular-updates/universe amd64 Components [55.0 kB]
+Get:10 http://mirrors.digitalocean.com/ubuntu oracular-updates/restricted amd64 Components [216 B]
+Get:11 http://mirrors.digitalocean.com/ubuntu oracular-updates/multiverse amd64 Components [212 B]
+Get:12 http://security.ubuntu.com/ubuntu oracular-security/main amd64 Components [9020 B]
+Get:13 http://security.ubuntu.com/ubuntu oracular-security/universe amd64 Components [5576 B]
+Get:14 http://security.ubuntu.com/ubuntu oracular-security/restricted amd64 Components [212 B]
+Get:15 http://security.ubuntu.com/ubuntu oracular-security/multiverse amd64 Components [212 B]
+Get:16 http://mirrors.digitalocean.com/ubuntu oracular-backports/main amd64 Components [212 B]
+Get:17 http://mirrors.digitalocean.com/ubuntu oracular-backports/universe amd64 Components [9696 B]
+Get:18 http://mirrors.digitalocean.com/ubuntu oracular-backports/restricted amd64 Components [216 B]
+Get:19 http://mirrors.digitalocean.com/ubuntu oracular-backports/multiverse amd64 Components [216 B]
+Fetched 995 kB in 1s (849 kB/s)
+Reading package lists... Done
+root@ubuntu-steph:~# sudo apt-get install tcpdump
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+tcpdump is already the newest version (4.99.4-3ubuntu4).
+tcpdump set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 62 not upgraded.
+root@ubuntu-steph:~# tcpdump --version
+tcpdump version 4.99.4
+libpcap version 1.10.5 (with TPACKET_V3)
+OpenSSL 3.3.1 4 Jun 2024
+root@ubuntu-steph:~# tcpdump -i eth0
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+18:38:58.500331 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 3962803593:3962803801, ack 3062140772, win 498, options [nop,nop,TS val 519888564 ecr 597856080], length 208
+18:38:58.503080 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 0, win 501, options [nop,nop,TS val 597856093 ecr 519888554], length 0
+18:38:58.513027 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 208, win 501, options [nop,nop,TS val 597856103 ecr 519888564], length 0
+18:38:58.603441 IP ubuntu-steph.53726 > 67.207.67.3.domain: 40823+ [1au] PTR? 66.188.243.162.in-addr.arpa. (56)
+18:38:58.603520 IP ubuntu-steph.44128 > 67.207.67.3.domain: 38138+ [1au] PTR? 66.188.243.162.in-addr.arpa. (56)
+18:38:58.603599 IP ubuntu-steph.48502 > 67.207.67.3.domain: Flags [S], seq 3672179660, win 64240, options [mss 1460,sackOK,TS val 2435754736 ecr 0,nop,wscale 7,tfo  cookiereq,nop,nop], length 0
+18:38:58.606325 IP 67.207.67.3.domain > ubuntu-steph.48502: Flags [S.], seq 4098433289, ack 3672179661, win 65160, options [mss 1460,sackOK,TS val 716953956 ecr 2435754736,nop,wscale 9], length 0
+18:38:58.606391 IP ubuntu-steph.48502 > 67.207.67.3.domain: Flags [.], ack 1, win 502, options [nop,nop,TS val 2435754739 ecr 716953956], length 0
+18:38:58.606468 IP ubuntu-steph.48502 > 67.207.67.3.domain: Flags [P.], seq 1:48, ack 1, win 502, options [nop,nop,TS val 2435754739 ecr 716953956], length 47 15911+ PTR? 66.188.243.162.in-addr.arpa. (45)
+18:38:58.607767 IP 67.207.67.3.domain > ubuntu-steph.48502: Flags [.], ack 48, win 128, options [nop,nop,TS val 716953959 ecr 2435754739], length 0
+18:38:58.634760 IP 67.207.67.3.domain > ubuntu-steph.48502: Flags [P.], seq 1:115, ack 48, win 128, options [nop,nop,TS val 716953986 ecr 2435754739], length 114 15911 NXDomain 0/1/0 (112)
+18:38:58.634818 IP ubuntu-steph.48502 > 67.207.67.3.domain: Flags [.], ack 115, win 502, options [nop,nop,TS val 2435754767 ecr 716953986], length 0
+18:38:58.635929 IP 67.207.67.3.domain > ubuntu-steph.53726: 40823 NXDomain 0/1/1 (123)
+18:38:58.636382 IP 67.207.67.3.domain > ubuntu-steph.44128: 38138 NXDomain 0/1/1 (123)
+18:38:58.637044 IP ubuntu-steph.56145 > 67.207.67.3.domain: 37770+ [1au] PTR? 227.254.190.146.in-addr.arpa. (57)
+18:38:58.673342 IP 67.207.67.3.domain > ubuntu-steph.56145: 37770 NXDomain 0/1/1 (124)
+18:38:58.674142 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 208:752, ack 1, win 498, options [nop,nop,TS val 519888737 ecr 597856103], length 544
+18:38:58.686943 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 752, win 501, options [nop,nop,TS val 597856277 ecr 519888737], length 0
+18:38:58.707155 IP ubuntu-steph.47932 > 67.207.67.3.domain: 18617+ [1au] PTR? 3.67.207.67.in-addr.arpa. (53)
+18:38:58.707237 IP ubuntu-steph.48669 > 67.207.67.3.domain: 24352+ [1au] PTR? 3.67.207.67.in-addr.arpa. (53)
+18:38:58.707294 IP ubuntu-steph.48502 > 67.207.67.3.domain: Flags [P.], seq 48:92, ack 115, win 502, options [nop,nop,TS val 2435754840 ecr 716953986], length 44 28437+ PTR? 3.67.207.67.in-addr.arpa. (42)
+18:38:58.724502 IP 67.207.67.3.domain > ubuntu-steph.47932: 18617 NXDomain 0/1/1 (120)
+18:38:58.725523 IP 67.207.67.3.domain > ubuntu-steph.48669: 24352 NXDomain 0/1/1 (120)
+18:38:58.739766 IP 67.207.67.3.domain > ubuntu-steph.48502: Flags [P.], seq 115:226, ack 92, win 128, options [nop,nop,TS val 716954091 ecr 2435754840], length 111 28437 NXDomain 0/1/0 (109)
+18:38:58.739813 IP ubuntu-steph.48502 > 67.207.67.3.domain: Flags [.], ack 226, win 502, options [nop,nop,TS val 2435754872 ecr 716954091], length 0
+18:38:58.741099 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 752:2960, ack 1, win 498, options [nop,nop,TS val 519888804 ecr 597856277], length 2208
+18:38:58.753861 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 2200, win 501, options [nop,nop,TS val 597856344 ecr 519888804], length 0
+18:38:58.753861 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 2960, win 496, options [nop,nop,TS val 597856344 ecr 519888804], length 0
+18:38:58.810510 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 2960:3120, ack 1, win 498, options [nop,nop,TS val 519888874 ecr 597856344], length 160
+18:38:58.810784 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 3120:4320, ack 1, win 498, options [nop,nop,TS val 519888874 ecr 597856344], length 1200
+18:38:58.810871 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 4320:4528, ack 1, win 498, options [nop,nop,TS val 519888874 ecr 597856344], length 208
+18:38:58.823175 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 3120, win 501, options [nop,nop,TS val 597856413 ecr 519888874], length 0
+18:38:58.823309 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 4320, win 501, options [nop,nop,TS val 597856414 ecr 519888874], length 0
+18:38:58.823398 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 4528, win 500, options [nop,nop,TS val 597856414 ecr 519888874], length 0
+18:38:58.914565 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 4528:4752, ack 1, win 498, options [nop,nop,TS val 519888978 ecr 597856414], length 224
+18:38:58.914770 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 4752:5584, ack 1, win 498, options [nop,nop,TS val 519888978 ecr 597856414], length 832
+18:38:58.927394 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 4752, win 501, options [nop,nop,TS val 597856518 ecr 519888978], length 0
+18:38:58.927395 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 5584, win 501, options [nop,nop,TS val 597856518 ecr 519888978], length 0
+18:38:59.018583 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 5584:6272, ack 1, win 498, options [nop,nop,TS val 519889082 ecr 597856518], length 688
+18:38:59.031412 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 6272, win 501, options [nop,nop,TS val 597856622 ecr 519889082], length 0
+18:38:59.122525 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 6272:6496, ack 1, win 498, options [nop,nop,TS val 519889186 ecr 597856622], length 224
+18:38:59.122622 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 6496:6704, ack 1, win 498, options [nop,nop,TS val 519889186 ecr 597856622], length 208
+18:38:59.135151 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 6496, win 501, options [nop,nop,TS val 597856726 ecr 519889186], length 0
+18:38:59.135151 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 6704, win 501, options [nop,nop,TS val 597856726 ecr 519889186], length 0
+18:38:59.226586 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 6704:7392, ack 1, win 498, options [nop,nop,TS val 519889290 ecr 597856726], length 688
+18:38:59.239408 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 7392, win 501, options [nop,nop,TS val 597856830 ecr 519889290], length 0
+18:38:59.330519 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 7392:7616, ack 1, win 498, options [nop,nop,TS val 519889394 ecr 597856830], length 224
+18:38:59.330729 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 7616:7824, ack 1, win 498, options [nop,nop,TS val 519889394 ecr 597856830], length 208
+18:38:59.343272 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 7616, win 501, options [nop,nop,TS val 597856934 ecr 519889394], length 0
+18:38:59.343273 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 7824, win 501, options [nop,nop,TS val 597856934 ecr 519889394], length 0
+18:38:59.434529 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 7824:8512, ack 1, win 498, options [nop,nop,TS val 519889498 ecr 597856934], length 688
+18:38:59.451227 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 8512, win 501, options [nop,nop,TS val 597857041 ecr 519889498], length 0
+18:38:59.538507 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 8512:8736, ack 1, win 498, options [nop,nop,TS val 519889602 ecr 597857041], length 224
+18:38:59.538591 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 8736:8944, ack 1, win 498, options [nop,nop,TS val 519889602 ecr 597857041], length 208
+18:38:59.553145 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 8944, win 501, options [nop,nop,TS val 597857143 ecr 519889602], length 0
+18:38:59.642569 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 8944:9488, ack 1, win 498, options [nop,nop,TS val 519889706 ecr 597857143], length 544
+18:38:59.656538 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 9488, win 501, options [nop,nop,TS val 597857247 ecr 519889706], length 0
+18:38:59.746593 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 9488:9712, ack 1, win 498, options [nop,nop,TS val 519889810 ecr 597857247], length 224
+18:38:59.746676 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 9712:9920, ack 1, win 498, options [nop,nop,TS val 519889810 ecr 597857247], length 208
+18:38:59.761756 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 9920, win 501, options [nop,nop,TS val 597857352 ecr 519889810], length 0
+18:38:59.850522 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 9920:10464, ack 1, win 498, options [nop,nop,TS val 519889914 ecr 597857352], length 544
+18:38:59.864230 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 10464, win 501, options [nop,nop,TS val 597857454 ecr 519889914], length 0
+18:38:59.954543 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 10464:10688, ack 1, win 498, options [nop,nop,TS val 519890018 ecr 597857454], length 224
+18:38:59.954652 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 10688:10896, ack 1, win 498, options [nop,nop,TS val 519890018 ecr 597857454], length 208
+18:38:59.968511 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 10896, win 501, options [nop,nop,TS val 597857559 ecr 519890018], length 0
+18:39:00.058623 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 10896:11440, ack 1, win 498, options [nop,nop,TS val 519890122 ecr 597857559], length 544
+18:39:00.073629 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 11440, win 501, options [nop,nop,TS val 597857664 ecr 519890122], length 0
+18:39:00.162571 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 11440:11664, ack 1, win 498, options [nop,nop,TS val 519890226 ecr 597857664], length 224
+18:39:00.162710 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 11664:11872, ack 1, win 498, options [nop,nop,TS val 519890226 ecr 597857664], length 208
+18:39:00.176291 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 11872, win 501, options [nop,nop,TS val 597857766 ecr 519890226], length 0
+18:39:00.266588 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 11872:12416, ack 1, win 498, options [nop,nop,TS val 519890330 ecr 597857766], length 544
+18:39:00.281433 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 12416, win 501, options [nop,nop,TS val 597857872 ecr 519890330], length 0
+18:39:00.370523 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 12416:12640, ack 1, win 498, options [nop,nop,TS val 519890434 ecr 597857872], length 224
+18:39:00.370655 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 12640:12848, ack 1, win 498, options [nop,nop,TS val 519890434 ecr 597857872], length 208
+18:39:00.370683 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 12848:12912, ack 1, win 498, options [nop,nop,TS val 519890434 ecr 597857872], length 64
+18:39:00.384499 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 12912, win 501, options [nop,nop,TS val 597857975 ecr 519890434], length 0
+18:39:00.474572 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 12912:13616, ack 1, win 498, options [nop,nop,TS val 519890538 ecr 597857975], length 704
+18:39:00.490802 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 13616, win 501, options [nop,nop,TS val 597858081 ecr 519890538], length 0
+18:39:00.578528 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 13616:13840, ack 1, win 498, options [nop,nop,TS val 519890642 ecr 597858081], length 224
+18:39:00.578681 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 13840:14048, ack 1, win 498, options [nop,nop,TS val 519890642 ecr 597858081], length 208
+18:39:00.592428 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 14048, win 501, options [nop,nop,TS val 597858182 ecr 519890642], length 0
+18:39:00.682627 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 14048:14592, ack 1, win 498, options [nop,nop,TS val 519890746 ecr 597858182], length 544
+18:39:00.696481 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 14592, win 501, options [nop,nop,TS val 597858287 ecr 519890746], length 0
+18:39:00.786568 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 14592:14816, ack 1, win 498, options [nop,nop,TS val 519890850 ecr 597858287], length 224
+18:39:00.786700 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 14816:15024, ack 1, win 498, options [nop,nop,TS val 519890850 ecr 597858287], length 208
+18:39:00.786733 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 15024:15088, ack 1, win 498, options [nop,nop,TS val 519890850 ecr 597858287], length 64
+18:39:00.801350 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 15088, win 501, options [nop,nop,TS val 597858392 ecr 519890850], length 0
+18:39:00.890637 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 15088:15792, ack 1, win 498, options [nop,nop,TS val 519890954 ecr 597858392], length 704
+18:39:00.905249 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 15792, win 501, options [nop,nop,TS val 597858496 ecr 519890954], length 0
+18:39:00.994548 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 15792:16016, ack 1, win 498, options [nop,nop,TS val 519891058 ecr 597858496], length 224
+18:39:00.994757 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 16016:16224, ack 1, win 498, options [nop,nop,TS val 519891058 ecr 597858496], length 208
+18:39:01.009056 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 16224, win 501, options [nop,nop,TS val 597858599 ecr 519891058], length 0
+18:39:01.098628 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 16224:16768, ack 1, win 498, options [nop,nop,TS val 519891162 ecr 597858599], length 544
+18:39:01.113951 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 16768, win 501, options [nop,nop,TS val 597858704 ecr 519891162], length 0
+18:39:01.162760 IP 67.207.67.3.domain > ubuntu-steph.48502: Flags [F.], seq 226, ack 92, win 128, options [nop,nop,TS val 716956513 ecr 2435754872], length 0
+18:39:01.162941 IP ubuntu-steph.48502 > 67.207.67.3.domain: Flags [F.], seq 92, ack 227, win 502, options [nop,nop,TS val 2435757295 ecr 716956513], length 0
+18:39:01.164435 IP 67.207.67.3.domain > ubuntu-steph.48502: Flags [.], ack 93, win 128, options [nop,nop,TS val 716956515 ecr 2435757295], length 0
+18:39:01.202598 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 16768:16992, ack 1, win 498, options [nop,nop,TS val 519891266 ecr 597858704], length 224
+18:39:01.202948 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 16992:17664, ack 1, win 498, options [nop,nop,TS val 519891266 ecr 597858704], length 672
+18:39:01.217288 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 17664, win 501, options [nop,nop,TS val 597858808 ecr 519891266], length 0
+18:39:01.306549 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 17664:18208, ack 1, win 498, options [nop,nop,TS val 519891370 ecr 597858808], length 544
+18:39:01.322440 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 18208, win 501, options [nop,nop,TS val 597858913 ecr 519891370], length 0
+18:39:01.410575 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 18208:18432, ack 1, win 498, options [nop,nop,TS val 519891474 ecr 597858913], length 224
+18:39:01.410840 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 18432:18640, ack 1, win 498, options [nop,nop,TS val 519891474 ecr 597858913], length 208
+18:39:01.425195 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 18640, win 501, options [nop,nop,TS val 597859015 ecr 519891474], length 0
+18:39:01.514562 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 18640:19024, ack 1, win 498, options [nop,nop,TS val 519891578 ecr 597859015], length 384
+18:39:01.514789 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 19024:19232, ack 1, win 498, options [nop,nop,TS val 519891578 ecr 597859015], length 208
+18:39:01.529590 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 19232, win 501, options [nop,nop,TS val 597859120 ecr 519891578], length 0
+18:39:01.618620 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 19232:19456, ack 1, win 498, options [nop,nop,TS val 519891682 ecr 597859120], length 224
+18:39:01.618795 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 19456:19824, ack 1, win 498, options [nop,nop,TS val 519891682 ecr 597859120], length 368
+18:39:01.633927 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 19824, win 501, options [nop,nop,TS val 597859224 ecr 519891682], length 0
+18:39:01.722610 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 19824:20368, ack 1, win 498, options [nop,nop,TS val 519891786 ecr 597859224], length 544
+18:39:01.736734 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 20368, win 501, options [nop,nop,TS val 597859327 ecr 519891786], length 0
+18:39:01.741179 IP 115.231.78.10.30186 > ubuntu-steph.sieve: Flags [S], seq 2752225864, win 29200, options [mss 1460], length 0
+18:39:01.741227 IP ubuntu-steph.sieve > 115.231.78.10.30186: Flags [R.], seq 0, ack 2752225865, win 0, length 0
+18:39:01.827101 IP ubuntu-steph.33930 > 67.207.67.3.domain: 14287+ [1au] PTR? 10.78.231.115.in-addr.arpa. (55)
+18:39:01.827376 IP ubuntu-steph.39329 > 67.207.67.3.domain: 59181+ [1au] PTR? 10.78.231.115.in-addr.arpa. (55)
+18:39:01.827498 IP ubuntu-steph.48512 > 67.207.67.3.domain: Flags [S], seq 1234265791, win 64240, options [mss 1460,sackOK,TS val 2435757960 ecr 0,nop,wscale 7,tfo  cookiereq,nop,nop], length 0
+18:39:01.827625 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 20368:20736, ack 1, win 498, options [nop,nop,TS val 519891891 ecr 597859327], length 368
+18:39:01.828828 IP 67.207.67.3.domain > ubuntu-steph.48512: Flags [S.], seq 4232196379, ack 1234265792, win 65160, options [mss 1460,sackOK,TS val 3151959678 ecr 2435757960,nop,wscale 9], length 0
+18:39:01.828888 IP ubuntu-steph.48512 > 67.207.67.3.domain: Flags [.], ack 1, win 502, options [nop,nop,TS val 2435757961 ecr 3151959678], length 0
+18:39:01.828974 IP ubuntu-steph.48512 > 67.207.67.3.domain: Flags [P.], seq 1:47, ack 1, win 502, options [nop,nop,TS val 2435757961 ecr 3151959678], length 46 46945+ PTR? 10.78.231.115.in-addr.arpa. (44)
+18:39:01.829100 IP 67.207.67.3.domain > ubuntu-steph.39329: 59181 NXDomain 0/1/1 (112)
+18:39:01.830336 IP 67.207.67.3.domain > ubuntu-steph.48512: Flags [.], ack 47, win 128, options [nop,nop,TS val 3151959679 ecr 2435757961], length 0
+18:39:01.831078 IP 67.207.67.3.domain > ubuntu-steph.48512: Flags [P.], seq 1:104, ack 47, win 128, options [nop,nop,TS val 3151959680 ecr 2435757961], length 103 46945 NXDomain 0/1/0 (101)
+18:39:01.831118 IP ubuntu-steph.48512 > 67.207.67.3.domain: Flags [.], ack 104, win 502, options [nop,nop,TS val 2435757963 ecr 3151959680], length 0
+18:39:01.840826 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 20736, win 501, options [nop,nop,TS val 597859431 ecr 519891891], length 0
+18:39:04.244894 IP 67.207.67.3.domain > ubuntu-steph.33930: 14287 NXDomain 0/1/1 (112)
+18:39:04.245923 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 20736:22912, ack 1, win 498, options [nop,nop,TS val 519894309 ecr 597859431], length 2176
+18:39:04.254914 IP 67.207.67.3.domain > ubuntu-steph.48512: Flags [F.], seq 104, ack 47, win 128, options [nop,nop,TS val 3151962104 ecr 2435757963], length 0
+18:39:04.255070 IP ubuntu-steph.48512 > 67.207.67.3.domain: Flags [F.], seq 47, ack 105, win 502, options [nop,nop,TS val 2435760387 ecr 3151962104], length 0
+18:39:04.256593 IP 67.207.67.3.domain > ubuntu-steph.48512: Flags [.], ack 48, win 128, options [nop,nop,TS val 3151962105 ecr 2435760387], length 0
+18:39:04.258800 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 22184, win 501, options [nop,nop,TS val 597861849 ecr 519894309], length 0
+18:39:04.258800 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 22912, win 496, options [nop,nop,TS val 597861849 ecr 519894309], length 0
+18:39:04.322507 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 22912:23056, ack 1, win 498, options [nop,nop,TS val 519894386 ecr 597861849], length 144
+18:39:04.322664 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 23056:24048, ack 1, win 498, options [nop,nop,TS val 519894386 ecr 597861849], length 992
+18:39:04.335418 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 23056, win 501, options [nop,nop,TS val 597861926 ecr 519894386], length 0
+18:39:04.335418 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 24048, win 501, options [nop,nop,TS val 597861926 ecr 519894386], length 0
+18:39:04.426554 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 24048:24736, ack 1, win 498, options [nop,nop,TS val 519894490 ecr 597861926], length 688
+18:39:04.439247 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 24736, win 501, options [nop,nop,TS val 597862030 ecr 519894490], length 0
+18:39:04.530541 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 24736:24960, ack 1, win 498, options [nop,nop,TS val 519894594 ecr 597862030], length 224
+18:39:04.530734 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 24960:25168, ack 1, win 498, options [nop,nop,TS val 519894594 ecr 597862030], length 208
+18:39:04.543572 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 24960, win 501, options [nop,nop,TS val 597862134 ecr 519894594], length 0
+18:39:04.543572 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 25168, win 501, options [nop,nop,TS val 597862134 ecr 519894594], length 0
+18:39:04.634732 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 25168:25856, ack 1, win 498, options [nop,nop,TS val 519894698 ecr 597862134], length 688
+18:39:04.647552 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 25856, win 501, options [nop,nop,TS val 597862238 ecr 519894698], length 0
+18:39:04.738547 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 25856:26080, ack 1, win 498, options [nop,nop,TS val 519894802 ecr 597862238], length 224
+18:39:04.738792 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 26080:26288, ack 1, win 498, options [nop,nop,TS val 519894802 ecr 597862238], length 208
+18:39:04.751435 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 26080, win 501, options [nop,nop,TS val 597862342 ecr 519894802], length 0
+18:39:04.751435 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 26288, win 501, options [nop,nop,TS val 597862342 ecr 519894802], length 0
+18:39:04.842606 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 26288:26976, ack 1, win 498, options [nop,nop,TS val 519894906 ecr 597862342], length 688
+18:39:04.855505 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 26976, win 501, options [nop,nop,TS val 597862446 ecr 519894906], length 0
+18:39:04.946536 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 26976:27344, ack 1, win 498, options [nop,nop,TS val 519895010 ecr 597862446], length 368
+18:39:04.959583 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 27344, win 501, options [nop,nop,TS val 597862550 ecr 519895010], length 0
+18:39:05.050624 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 27344:27712, ack 1, win 498, options [nop,nop,TS val 519895114 ecr 597862550], length 368
+18:39:05.063464 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 27712, win 501, options [nop,nop,TS val 597862654 ecr 519895114], length 0
+18:39:05.154578 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 27712:28080, ack 1, win 498, options [nop,nop,TS val 519895218 ecr 597862654], length 368
+18:39:05.167294 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 28080, win 501, options [nop,nop,TS val 597862758 ecr 519895218], length 0
+18:39:05.258567 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 28080:28448, ack 1, win 498, options [nop,nop,TS val 519895322 ecr 597862758], length 368
+18:39:05.271303 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 28448, win 501, options [nop,nop,TS val 597862862 ecr 519895322], length 0
+18:39:05.362602 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 28448:28672, ack 1, win 498, options [nop,nop,TS val 519895426 ecr 597862862], length 224
+18:39:05.362798 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 28672:28880, ack 1, win 498, options [nop,nop,TS val 519895426 ecr 597862862], length 208
+18:39:05.375536 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 28672, win 501, options [nop,nop,TS val 597862966 ecr 519895426], length 0
+18:39:05.377195 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 28880, win 501, options [nop,nop,TS val 597862968 ecr 519895426], length 0
+18:39:05.466590 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 28880:29568, ack 1, win 498, options [nop,nop,TS val 519895530 ecr 597862968], length 688
+18:39:05.481386 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 29568, win 501, options [nop,nop,TS val 597863072 ecr 519895530], length 0
+18:39:05.570502 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 29568:29792, ack 1, win 498, options [nop,nop,TS val 519895634 ecr 597863072], length 224
+18:39:05.570606 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 29792:30000, ack 1, win 498, options [nop,nop,TS val 519895634 ecr 597863072], length 208
+18:39:05.585277 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 30000, win 501, options [nop,nop,TS val 597863176 ecr 519895634], length 0
+18:39:05.674538 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 30000:30544, ack 1, win 498, options [nop,nop,TS val 519895738 ecr 597863176], length 544
+18:39:05.689709 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 30544, win 501, options [nop,nop,TS val 597863280 ecr 519895738], length 0
+18:39:05.778531 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 30544:30912, ack 1, win 498, options [nop,nop,TS val 519895842 ecr 597863280], length 368
+18:39:05.792297 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 30912, win 501, options [nop,nop,TS val 597863382 ecr 519895842], length 0
+18:39:05.882596 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 30912:31280, ack 1, win 498, options [nop,nop,TS val 519895946 ecr 597863382], length 368
+18:39:05.896304 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 31280, win 501, options [nop,nop,TS val 597863486 ecr 519895946], length 0
+18:39:05.986507 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 31280:31504, ack 1, win 498, options [nop,nop,TS val 519896050 ecr 597863486], length 224
+18:39:05.986609 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 31504:31712, ack 1, win 498, options [nop,nop,TS val 519896050 ecr 597863486], length 208
+18:39:06.002141 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 31712, win 501, options [nop,nop,TS val 597863592 ecr 519896050], length 0
+18:39:06.090558 IP ubuntu-steph.ssh > 162.243.188.66.22634: Flags [P.], seq 31712:32256, ack 1, win 498, options [nop,nop,TS val 519896154 ecr 597863592], length 544
+18:39:06.104118 IP 162.243.188.66.22634 > ubuntu-steph.ssh: Flags [.], ack 32256, win 501, options [nop,nop,TS val 597863694 ecr 519896154], length 0
+^C
+180 packets captured
+186 packets received by filter
+0 packets dropped by kernel
