@@ -1,3 +1,0 @@
-root@ubuntu-steph:~# traceroute 146.190.254.227
-traceroute to 146.190.254.227 (146.190.254.227), 30 hops max, 60 byte packets
- 1  ubuntu-steph (146.190.254.227)  0.035 ms  0.008 ms  0.006 ms
