@@ -1,0 +1,157 @@
+Name
+MICROSOFT.COM
+
+Registry Domain ID
+2724960_DOMAIN_COM-VRSN
+
+Registered On
+1991-05-02T04:00:00Z
+
+Expires On
+2025-05-03T04:00:00Z
+
+Updated On
+2023-08-18T16:15:54Z
+
+Domain Status
+client delete prohibited
+client transfer prohibited
+client update prohibited
+server delete prohibited
+server transfer prohibited
+server update prohibited
+
+Name Servers
+NS1-39.AZURE-DNS.COM
+NS2-39.AZURE-DNS.NET
+NS3-39.AZURE-DNS.ORG
+NS4-39.AZURE-DNS.INFO
+
+-----------------------------------------------------
+
+Name
+SQUARESPACE.COM
+
+Registry Domain ID
+96151137_DOMAIN_COM-VRSN
+
+Registered On
+2003-03-25T21:26:58Z
+
+Expires On
+2025-03-25T20:26:58Z
+
+Updated On
+2023-02-21T09:12:02Z
+
+Domain Status
+client delete prohibited
+client transfer prohibited
+client update prohibited
+server delete prohibited
+server transfer prohibited
+server update prohibited
+
+Name Servers
+DNS1.P03.NSONE.NET
+DNS2.P03.NSONE.NET
+DNS3.P03.NSONE.NET
+DNS4.P03.NSONE.NET
+
+NS01.SQUARESPACEDNS.COM
+NS02.SQUARESPACEDNS.COM
+NS03.SQUARESPACEDNS.COM
+NS04.SQUARESPACEDNS.COM
+
+-----------------------------------------------------
+
+Name
+PAYPAL.COM
+
+Registry Domain ID
+8017040_DOMAIN_COM-VRSN
+
+Registered On
+1999-07-15T05:32:11Z
+
+Expires On
+2025-07-15T05:32:11Z
+
+Updated On
+2024-10-08T21:00:07Z
+
+Domain Status
+client delete prohibited
+client transfer prohibited
+client update prohibited
+server delete prohibited
+server transfer prohibited
+server update prohibited
+
+Name Servers
+NS1.P57.DYNECT.NET
+NS2.P57.DYNECT.NET
+PDNS100.ULTRADNS.COM
+PDNS100.ULTRADNS.NET
+
+-----------------------------------------------------
+
+Name
+SHOPIFY.COM
+
+Registry Domain ID
+145873763_DOMAIN_COM-VRSN
+
+Registered On
+2005-03-11T05:18:03Z
+
+Expires On
+2025-03-11T05:18:03Z
+
+Updated On
+2023-02-07T09:20:22Z
+
+Domain Status
+client delete prohibited
+client transfer prohibited
+client update prohibited
+server delete prohibited
+server transfer prohibited
+server update prohibited
+
+Name Servers
+DNS1.P06.NSONE.NET
+DNS2.P06.NSONE.NET
+DNS3.P06.NSONE.NET
+DNS4.P06.NSONE.NET
+NS1.DNSIMPLE.COM
+NS2.DNSIMPLE.COM
+NS3.DNSIMPLE.COM
+NS4.DNSIMPLE.COM
+
+-----------------------------------------------------
+
+Name
+LEETCODE.COM
+
+Registry Domain ID
+1605940857_DOMAIN_COM-VRSN
+
+Registered On
+2010-07-11T01:27:34Z
+
+Expires On
+2025-07-11T01:27:34Z
+
+Updated On
+2024-07-11T10:48:54Z
+
+Domain Status
+client delete prohibited
+client renew prohibited
+client transfer prohibited
+client update prohibited
+
+Name Servers
+MELINDA.NS.CLOUDFLARE.COM
+ROB.NS.CLOUDFLARE.COM
