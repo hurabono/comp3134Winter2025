@@ -1,0 +1,30 @@
+root@ubuntu-steph:~# ssh root@146.190.254.227
+root@146.190.254.227's password: 
+Welcome to Ubuntu 24.10 (GNU/Linux 6.11.0-9-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Mar  5 21:20:36 UTC 2025
+
+  System load:  0.0               Processes:             110
+  Usage of /:   7.8% of 23.10GB   Users logged in:       1
+  Memory usage: 18%               IPv4 address for eth0: 146.190.254.227
+  Swap usage:   0%                IPv4 address for eth0: 10.20.0.5
+
+124 updates can be applied immediately.
+61 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Wed Mar  5 21:15:48 2025 from 162.243.188.66
+root@ubuntu-steph:~# tcpdump -i any -w all_traffic_20250304_1530.pcap
+tcpdump: WARNING: any: That device doesn't support promiscuous mode
+(Promiscuous mode not supported on the "any" device)
+tcpdump: data link type LINUX_SLL2
+tcpdump: listening on any, link-type LINUX_SLL2 (Linux cooked v2), snapshot length 262144 bytes
+
+^C568 packets captured
+1131 packets received by filter
+0 packets dropped by kernel
