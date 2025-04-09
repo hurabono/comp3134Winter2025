@@ -1,0 +1,7 @@
+Problem 1 (unnecessary path access) mitigation:
+- Use baseline() on the entered path to restrict unnecessary parent directory access.
+- This allows access to folders less than /var/www/html.
+
+Problem 2 (Access to non-existent folders) Mitigate:
+- Use the file_exists() and is_dir() functions to verify that the requested folder actually exists.
+- If it does not exist, the script stops and outputs the appropriate error message.

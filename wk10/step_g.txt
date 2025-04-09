@@ -1,0 +1,7 @@
+Using PHP comments instead of HTML comments prevents sensitive information from being exposed 
+in the client’s browser because PHP code is executed on the server side. When the server processes a PHP script,
+it removes all PHP comments before sending the generated output to the client. 
+
+Therefore, any comments written in PHP are never part of the HTML output that the browser receives. 
+In contrast, HTML comments are sent directly to the client as part of the page's source code, making them visible when a user views the page source. 
+This behavior means that including sensitive details in HTML comments could unintentionally reveal important information to users.

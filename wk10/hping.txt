@@ -1,0 +1,137 @@
+root@ubuntu-steph:~# sudo hping3 -S 146.190.254.227 -c 10000 --rand-source
+HPING 146.190.254.227 (eth0 146.190.254.227): S set, 40 headers + 0 data bytes
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=0 win=0 rtt=0.5 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=1 win=0 rtt=0.3 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=2 win=0 rtt=0.1 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=3 win=0 rtt=2.0 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=4 win=0 rtt=1.8 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=5 win=0 rtt=2.0 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=6 win=0 rtt=0.5 ms
+len=40 ip=146.190.254.227 ttl=1 DF id=0 sport=0 flags=RA seq=7 win=0 rtt=0.3 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=8 win=0 rtt=1.1 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=9 win=0 rtt=2.0 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=10 win=0 rtt=0.8 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=11 win=0 rtt=1.6 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=12 win=0 rtt=0.5 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=13 win=0 rtt=1.2 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=14 win=0 rtt=0.9 ms
+len=40 ip=146.190.254.227 ttl=1 DF id=0 sport=0 flags=RA seq=15 win=0 rtt=0.4 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=16 win=0 rtt=0.3 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=17 win=0 rtt=2.1 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=18 win=0 rtt=0.9 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=19 win=0 rtt=0.7 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=20 win=0 rtt=0.6 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=21 win=0 rtt=0.4 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=22 win=0 rtt=1.2 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=23 win=0 rtt=1.1 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=24 win=0 rtt=0.9 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=25 win=0 rtt=0.7 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=26 win=0 rtt=0.5 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=27 win=0 rtt=0.3 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=28 win=0 rtt=1.1 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=29 win=0 rtt=2.0 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=30 win=0 rtt=0.8 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=31 win=0 rtt=0.6 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=32 win=0 rtt=0.4 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=33 win=0 rtt=0.2 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=34 win=0 rtt=1.1 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=35 win=0 rtt=0.8 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=36 win=0 rtt=0.6 ms
+len=40 ip=146.190.254.227 ttl=1 DF id=0 sport=0 flags=RA seq=37 win=0 rtt=0.4 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=38 win=0 rtt=1.2 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=39 win=0 rtt=2.0 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=40 win=0 rtt=1.7 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=41 win=0 rtt=1.5 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=42 win=0 rtt=1.3 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=43 win=0 rtt=1.2 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=44 win=0 rtt=1.0 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=45 win=0 rtt=0.8 ms
+len=40 ip=146.190.254.227 ttl=64 DF id=0 sport=0 flags=RA seq=46 win=0 rtt=0.7 ms
+^C
+--- 146.190.254.227 hping statistic ---
+47 packets transmitted, 47 packets received, 0% packet loss
+round-trip min/avg/max = 0.1/1.0/2.1 ms
+root@ubuntu-steph:~# sudo hping3 -2 146.190.254.227 -c 9000 -a 1.2.3.4 --fast
+HPING 146.190.254.227 (eth0 146.190.254.227): udp mode set, 28 headers + 0 data bytes
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1606 seq=0
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1607 seq=1
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1608 seq=2
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1609 seq=3
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1610 seq=4
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1611 seq=5
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1616 seq=10
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1626 seq=20
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1636 seq=30
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1646 seq=40
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1656 seq=50
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1666 seq=60
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1676 seq=70
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1686 seq=80
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1696 seq=90
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1706 seq=100
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1716 seq=110
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1726 seq=120
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1736 seq=130
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1746 seq=140
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1756 seq=150
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1766 seq=160
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1776 seq=170
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1786 seq=180
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1796 seq=190
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1806 seq=200
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1816 seq=210
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1826 seq=220
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1836 seq=230
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1846 seq=240
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1856 seq=250
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1866 seq=260
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1876 seq=270
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1886 seq=280
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1896 seq=290
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1906 seq=300
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1916 seq=310
+ICMP Port Unreachable from ip=146.190.254.227 name=ubuntu-steph
+status=0 port=1926 seq=320
+^C
+--- 146.190.254.227 hping statistic ---
+324 packets transmitted, 38 packets received, 89% packet loss
+round-trip min/avg/max = 0.3/2.3/41.1 ms
+root@ubuntu-steph:~# sudo hping3 -1 146.190.254.227 -c 11000 --data 1024 -i u13333
+HPING 146.190.254.227 (eth0 146.190.254.227): icmp mode set, 28 headers + 1024 data bytes
