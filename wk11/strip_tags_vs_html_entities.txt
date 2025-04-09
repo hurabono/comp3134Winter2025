@@ -1,0 +1,5 @@
+- strip_tags: 
+Completely remove HTML and PHP tags and print them. As a result, all script tags or HTML codes may be deleted, resulting in the loss of some of your input (tags).
+
+- htmlentities: 
+convert special characters into HTML entities. This method preserves the original text of the user input while securely printing it out to prevent the browser from interpreting it as HTML code.

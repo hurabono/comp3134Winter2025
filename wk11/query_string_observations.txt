@@ -1,0 +1,42 @@
+========== Query String Observations ==========
+Date: 2025-04-08
+
+[Scenario 1: Enter the correct English word]
+- Action: Type "security" in the search form and submit it.
+- Results: The site normally outputs definitions and relevant information about "security".
+- Observation:
+- The page loads normally, displays word definitions and related examples.
+- There are no errors or warning messages.
+
+-------------------------------------------------
+
+[Scenario 2: Enter the wrong word in the URL]
+- Action: Enter /browse/ followed by "cyberseczzz" at the URL address.
+- Result: Site does not find a search result for "cyberseczzz" or outputs an error message.
+- Observation:
+- A prompt is displayed such as "The word does not exist" or "No search results".
+- The page style or layout is not broken.
+
+-------------------------------------------------
+
+[Scenario 3: Type the script tag in the form]
+- Operation: Type '<script>alert('hello')</script>' in the search form and submit it.
+- Result: The code you entered is still output as a string, and the script does not run.
+- Observation:
+- The JavaScript alert window (alert) does not appear within the page.
+- The tags you entered are escaped or removed and displayed as simple text.
+
+-------------------------------------------------
+
+[Scenario 4: Add script tag to URL query string]
+- Action: Enter after adding '<script>alert('hello')</script>' to the /browse/term= part of the URL.
+- Result: Web pages don't run scripts, code is handled securely and is displayed as a string on the screen.
+- Observation:
+- Verified that the web page has security mitigation measures applied safely against XSS attacks.
+- Displays the result that the input script code is encoded or filtered.
+
+-------------------------------------------------
+
+Additional Notes:
+- In each scenario, it is better to check the browser's console log or error messages, and changes in the HTML code on the page.
+- If possible, recording the name and location of the screenshot file for each result will be convenient for future reports.
