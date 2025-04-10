@@ -1,0 +1,12 @@
+Input value: Ben
+
+Result: Nothing is output active = 0
+Description: Condition firstname = 'Ben' AND active = 1 not satisfied
+Input value: Ben'--
+
+Result: annotated with SQL syntax firstname = 'Ben'-- ' AND active = 1
+Description: -- Subsequent ignored and active = 1 condition removed → Ben can also be viewed
+Input value: Ben' or 1=1
+
+Result: Conditional statement executed as firstname = 'Ben' or 1 = 1 AND active = 1
+Description: 1=1 is always true, so everyone with active = 1 is printed → SQL injection successful
