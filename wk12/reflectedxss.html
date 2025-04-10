@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Reflected XSS</title></head>
+<body>
+    <h1>Reflected XSS Test</h1>
+    <form id="xss-form">
+        <input type="text" id="xss-input" />
+        <button type="submit">Submit</button>
+    </form>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("xss-form").addEventListener("submit", function(e) {
+            e.preventDefault(); // 기본 동작 방지
+            const input = document.getElementById("xss-input").value;
+            document.getElementById("output").innerHTML = input;
+        });
+    </script>
+</body>
+</html>

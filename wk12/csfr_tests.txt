@@ -1,0 +1,3 @@
+- csfr.html has CSRF vulnerability, no verification
+- csfr_form.php can be verified including random tokens
+- Improved security by being able to determine if the actual request is a valid user

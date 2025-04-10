@@ -1,0 +1,3 @@
+he storexss.php file is outputting user input as it is without filtering.
+A serious security issue, stored XSS that could allow malicious scripts to run.
+The workaround is to escape user input before output using html specialchars(), etc.
